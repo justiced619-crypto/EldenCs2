@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "game": "Elden Ring",
+  "baseline_build_id": "25080141",
+  "scope": "Offline starter slice: all 12 selectable starting origins equip the existing Jar Cannon and matching Ballista Bolts from the start. No custom model or CS2 assets.",
+  "rows": [
+    {
+      "id": "jar-cannon-accessibility",
+      "param": "EquipParamWeapon",
+      "row_id": 44010000,
+      "item": "Jar Cannon",
+      "field": "RequiredStrength",
+      "baseline": 34,
+      "value": 8,
+      "unit": "attribute points",
+      "reason": "Allow a fresh character to use the firearm immediately.",
+      "references": []
+    },
+    {
+      "id": "jar-cannon-dexterity-accessibility",
+      "param": "EquipParamWeapon",
+      "row_id": 44010000,
+      "item": "Jar Cannon",
+      "field": "RequiredDexterity",
+      "baseline": 12,
+      "value": 8,
+      "unit": "attribute points",
+      "reason": "Keep the firearm usable by a fresh character.",
+      "references": []
+    },
+    {
+      "id": "jar-cannon-weight",
+      "param": "EquipParamWeapon",
+      "row_id": 44010000,
+      "item": "Jar Cannon",
+      "field": "Weight",
+      "baseline": 15.0,
+      "value": 8.0,
+      "unit": "weight",
+      "reason": "Reduce the burden of carrying the firearm in the first playable slice.",
+      "references": []
+    },
+    {
+      "id": "ballista-bolt-capacity",
+      "param": "EquipParamWeapon",
+      "row_id": 53000000,
+      "item": "Ballista Bolt",
+      "field": "MaxArrowQuantity",
+      "baseline": 20,
+      "value": 30,
+      "unit": "bolts",
+      "reason": "Give the player a longer exploration loop before needing to restock; firing and reloading remain the game's existing behavior.",
+      "references": ["jar-cannon-accessibility"]
+    }
+  ],
+  "starting_loadouts": [
+    {"id":"vagabond","class":"Vagabond","init_id":3100,"origin_id":3000,"baseline_weapon":2000000,"baseline_bolt":-1,"weapon":44010000,"bolt":53000000,"references":["jar-cannon-accessibility","ballista-bolt-capacity"]},
+    {"id":"warrior","class":"Warrior","init_id":3102,"origin_id":3001,"baseline_weapon":7140000,"baseline_bolt":-1,"weapon":44010000,"bolt":53000000,"references":["jar-cannon-accessibility","ballista-bolt-capacity"]},
+    {"id":"hero","class":"Hero","init_id":3104,"origin_id":3002,"baseline_weapon":14000000,"baseline_bolt":-1,"weapon":44010000,"bolt":53000000,"references":["jar-cannon-accessibility","ballista-bolt-capacity"]},
+    {"id":"bandit","class":"Bandit","init_id":3106,"origin_id":3003,"baseline_weapon":1090000,"baseline_bolt":-1,"weapon":44010000,"bolt":53000000,"references":["jar-cannon-accessibility","ballista-bolt-capacity"]},
+    {"id":"astrologer","class":"Astrologer","init_id":3108,"origin_id":3004,"baseline_weapon":33130000,"baseline_bolt":-1,"weapon":44010000,"bolt":53000000,"references":["jar-cannon-accessibility","ballista-bolt-capacity"]},
+    {"id":"prophet","class":"Prophet","init_id":3110,"origin_id":3005,"baseline_weapon":16000000,"baseline_bolt":-1,"weapon":44010000,"bolt":53000000,"references":["jar-cannon-accessibility","ballista-bolt-capacity"]},
+    {"id":"confessor","class":"Confessor","init_id":3112,"origin_id":3006,"baseline_weapon":2020000,"baseline_bolt":-1,"weapon":44010000,"bolt":53000000,"references":["jar-cannon-accessibility","ballista-bolt-capacity"]},
+    {"id":"samurai","class":"Samurai","init_id":3114,"origin_id":3007,"baseline_weapon":9000000,"baseline_bolt":-1,"weapon":44010000,"bolt":53000000,"references":["jar-cannon-accessibility","ballista-bolt-capacity"]},
+    {"id":"prisoner","class":"Prisoner","init_id":3116,"origin_id":3008,"baseline_weapon":5000000,"baseline_bolt":-1,"weapon":44010000,"bolt":53000000,"references":["jar-cannon-accessibility","ballista-bolt-capacity"]},
+    {"id":"wretch","class":"Wretch","init_id":3118,"origin_id":3009,"baseline_weapon":11010000,"baseline_bolt":-1,"weapon":44010000,"bolt":53000000,"references":["jar-cannon-accessibility","ballista-bolt-capacity"]},
+    {"id":"dlc-origin-1","class":"DLC starting origin 1","init_id":3120,"origin_id":3010,"baseline_weapon":67530000,"baseline_bolt":-1,"weapon":44010000,"bolt":53000000,"references":["jar-cannon-accessibility","ballista-bolt-capacity"]},
+    {"id":"dlc-origin-2","class":"DLC starting origin 2","init_id":3122,"origin_id":3011,"baseline_weapon":8530000,"baseline_bolt":-1,"weapon":44010000,"bolt":53000000,"references":["jar-cannon-accessibility","ballista-bolt-capacity"]}
+  ]
+}
